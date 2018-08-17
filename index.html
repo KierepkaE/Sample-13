@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         :root {
+            --textSize: 80px;
+        }
+        
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: calc(var( --textSize)/2);
+            background-color: transparent;
+            border: 2px solid black;
+            line-height: 55px;
+            text-transform: uppercase;
+            transition: .5s .03s linear;
+            cursor: pointer;
+        }
+        
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: arial;
+            font-size: var( --textSize);
+        }
+        
+        h1.big {
+            font-size: calc(var( --textSize)*2);
+        }
+        
+        h1.small {
+            font-size: calc(var( --textSize)/2);
+        }
+        
+        h1.frame {
+            border: 4px dotted black;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button class="larger">2xBigger</button>
+    <button class="smaller">2xSmaller</button>
+    <button class="border">Border</button>
+    <h1>Nazwa</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $('.larger').click(function() {
+            $('h1').toggleClass('big');
+        })
+
+        $('.smaller').click(function() {
+            $('h1').toggleClass('small');
+        })
+
+        $('.border').click(function() {
+            $('h1').toggleClass('frame');
+        })
+    </script>
+</body>
+
+</html>
