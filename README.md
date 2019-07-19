@@ -1,5 +1,5 @@
-# Sample-13
+# name animation
 
-
-
-Course www.samurajprogramowania.pl
+- CSS 
+- HTML
+- jQuery
